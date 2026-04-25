@@ -1,319 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Whisk - Quotation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --gold: #d4af37;
-            --dark-gold: #b8860b;
-            --light-cream: #fffdf5;
-            --text-gray: #444;
-        }
-
-        /* General Styling */
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: #e0e0e0;
-            margin: 0;
-            padding: 40px 20px;
-            color: var(--text-gray);
-        }
-
-        /* The Paper Sheet */
-        .paper {
-            background: white;
-            width: 850px;
-            margin: 0 auto;
-            padding: 70px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            min-height: 1100px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-        }
-
-        /* Branding Header */
-        .header {
-            text-align: center;
-            border-bottom: 2px solid var(--gold);
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-        }
-
-        .logo {
-            width: 100px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            color: var(--dark-gold);
-            font-size: 2.5em;
-            letter-spacing: 8px;
-            margin: 10px 0;
-            font-weight: 700;
-        }
-
-        /* Client & Invoice Info */
-        .info-section {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 50px;
-        }
-
-        .info-box strong {
-            color: var(--dark-gold);
-            text-transform: uppercase;
-            font-size: 0.85em;
-        }
-
-        .editable {
-            border-bottom: 1px dashed #ccc;
-            padding: 4px;
-            min-width: 30px;
-            display: inline-block;
-            outline: none;
-            transition: all 0.2s;
-        }
-
-        .editable:focus {
-            border-bottom: 2px solid var(--gold);
-            background: var(--light-cream);
-        }
-
-        /* Table Styling */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th {
-            background-color: var(--gold);
-            color: white;
-            font-family: 'Playfair Display', serif;
-            padding: 15px;
-            text-align: left;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        td {
-            border-bottom: 1px solid #f0f0f0;
-            padding: 18px 15px;
-            vertical-align: top;
-        }
-
-        .col-total {
-            font-weight: bold;
-            text-align: right;
-            color: #222;
-        }
-
-        /* Totals Area */
-        .grand-total-wrapper {
-            text-align: right;
-            font-size: 1.8em;
-            color: var(--dark-gold);
-            margin-top: 20px;
-            border-top: 3px double var(--gold);
-            padding-top: 15px;
-            font-family: 'Playfair Display', serif;
-            font-weight: bold;
-        }
-
-        /* Terms & Signatures */
-        .terms-section {
-            margin-top: 50px;
-            font-size: 0.9em;
-            line-height: 1.6;
-        }
-
-        .terms-section h3 {
-            color: var(--dark-gold);
-            border-bottom: 1px solid var(--gold);
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        .signature-section {
-            margin-top: auto;
-            display: flex;
-            justify-content: space-between;
-            padding-top: 60px;
-        }
-
-        .sig-box {
-            width: 40%;
-            border-top: 1px solid #444;
-            text-align: center;
-            padding-top: 10px;
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-        }
-
-        /* Control Buttons (Floating) */
-        .controls {
-            position: fixed;
-            top: 30px;
-            right: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 1000;
-        }
-
-        .btn {
-            padding: 14px 25px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            color: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.2s, background 0.2s;
-            font-family: 'Lato', sans-serif;
-            text-transform: uppercase;
-            font-size: 0.8em;
-        }
-
-        .btn-download { background: #222; }
-        .btn-add { background: var(--dark-gold); }
-        .btn:hover { transform: scale(1.05); }
-
-        /* Print Mode Optimizations */
-        @media print {
-            .controls { display: none; }
-            body { background: white; padding: 0; }
-            .paper { 
-                box-shadow: none; 
-                margin: 0; 
-                width: 100%; 
-                padding: 40px; 
-                min-height: 100vh;
-            }
-            .editable { border-bottom: none; }
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Golden Whisk Quotation - Elegant Card Design</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:14px;font-family:Arial,sans-serif;background:#1a1a1a}
+.toolbar{max-width:210mm;margin:0 auto 12px;display:flex;gap:10px;justify-content:center}
+button{padding:10px 16px;border-radius:12px;border:1px solid #d4af37;background:#111;color:#d4af37}
+.page{width:210mm;min-height:297mm;margin:auto;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 0 24px rgba(0,0,0,.3)}
+.header{padding:28px;background:linear-gradient(135deg,#111,#2b2b2b);color:#d4af37}
+.brand{font-size:46px;font-weight:700}
+.sub{font-size:17px;margin-top:6px}
+.quote{margin-top:18px;font-size:42px;letter-spacing:3px;color:#fff}
+.content{padding:24px;background:linear-gradient(180deg,#fffdf8,#fff7e8)}
+.topcards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:#fff;border:2px solid #efd48a;border-radius:18px;padding:18px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.label{font-size:13px;color:#b8860b;font-weight:700;margin-top:6px}
+input,textarea{width:100%;padding:11px;border:1px solid #ead8a0;border-radius:10px;margin-top:6px}
+.tablewrap{margin-top:22px;background:#fff;border-radius:18px;overflow:hidden;border:2px solid #efd48a}
+table{width:100%;border-collapse:collapse} th{background:#111;color:#d4af37;padding:12px} td{padding:10px;border-top:1px solid #f0e1b2}
+.summary{margin-top:22px;display:flex;justify-content:flex-end}
+.totalbox{width:320px;background:#111;color:#d4af37;border-radius:18px;padding:18px}
+.totalrow{display:flex;justify-content:space-between;font-size:18px}
+.big{font-size:30px;font-weight:700;margin-top:8px}
+.note{margin-top:28px;padding:16px;border-left:5px solid #d4af37;background:#fff;border-radius:12px}
+@media(max-width:768px){.page{width:100%}.topcards{grid-template-columns:1fr}.brand{font-size:34px}.quote{font-size:30px}}
+</style>
 </head>
 <body>
-
-<div class="controls">
-    <button class="btn btn-download" onclick="window.print()">Download as PDF</button>
-    <button class="btn btn-add" onclick="addRow()">+ Add New Item</button>
+<div class="toolbar"><button onclick="saveData()">Save</button><button onclick="window.print()">Print / PDF</button></div>
+<div class="page">
+<div class="header">
+<div class="brand">Golden Whisk</div>
+<div class="sub">Luxury Cakes & Custom Orders • D. Anthony</div>
+<div class="quote">QUOTATION</div>
 </div>
-
-<div class="paper">
-    <div class="header">
-        <img src="C:\Users\lahir\OneDrive\WhatsApp_Image_2026-02-14_at_17.52.57-removebg-preview.png" alt="Golden Whisk Logo" class="logo">
-        <h1>QUOTATION</h1>
-        <p style="font-style: italic; color: var(--dark-gold); letter-spacing: 2px;">Bespoke Cakes & Fine Confections</p>
-    </div>
-
-    <div class="info-section">
-        <div class="info-box">
-            <strong>Prepared For</strong><br>
-            <div class="editable" contenteditable="true" style="width: 280px; font-size: 1.1em;">[Customer Name]</div><br>
-            <div class="editable" contenteditable="true" style="width: 280px; font-size: 0.9em;">[Phone / Event Location]</div>
-        </div>
-        <div class="info-box" style="text-align: right;">
-            <strong>Quote Details</strong><br>
-            Date: <span class="editable" contenteditable="true">February 14, 2026</span><br>
-            Quote No: <span class="editable" contenteditable="true">GW-2026-001</span>
-        </div>
-    </div>
-
-    <table id="quoteTable">
-        <thead>
-            <tr>
-                <th>Description</th>
-                <th style="width: 60px;">Qty</th>
-                <th style="width: 120px;">Price (Rs)</th>
-                <th style="width: 120px; text-align: right;">Total (Rs)</th>
-            </tr>
-        </thead>
-        <tbody id="tableBody">
-            <tr class="item-row">
-                <td><div class="editable" contenteditable="true" style="width: 100%; font-weight: bold;">Custom Signature Cake</div><div class="editable" contenteditable="true" style="width: 100%; font-size: 0.85em; color: #666;">Enter flavor and size details here...</div></td>
-                <td><div class="editable qty" contenteditable="true">1</div></td>
-                <td><div class="editable price" contenteditable="true">0.00</div></td>
-                <td class="col-total">0.00</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="grand-total-wrapper">
-        GRAND TOTAL: Rs<span id="grandTotal">0.00</span>
-    </div>
-
-    <div class="terms-section">
-        <h3>Terms & Conditions</h3>
-        <p>
-            • A <strong>50% non-refundable deposit</strong> is required to secure your booking date.<br>
-            • Final balance must be settled <strong>7 days</strong> before the event.<br>
-            • Product may contain or come into contact with <strong>dairy, wheat, or nuts</strong>.
-        </p>
-    </div>
-
-    <div class="signature-section">
-        <div class="sig-box">
-            <span style="font-weight: bold;">Golden Whisk</span><br>
-            <span style="font-size: 0.8em; color: #888;">Authorized Representative</span><br>
-            <span style="font-size: 0.8em; color: #888;">D Anthony</span>
-        </div>
-        <div class="sig-box">
-            <span style="font-weight: bold;">Client Acceptance</span><br>
-            <span style="font-size: 0.8em; color: #888;">Signature & Date</span>
-        </div>
-    </div>
+<div class="content">
+<div class="topcards">
+<div class="card">
+<div class="label">CLIENT DETAILS</div>
+<input id="client" placeholder="Client Name">
+<textarea id="address" rows="3" placeholder="Address"></textarea>
+<input id="phone" placeholder="Phone Number">
 </div>
-
+<div class="card">
+<div class="label">QUOTE INFO</div>
+<input id="qno" placeholder="Quotation No">
+<input id="qdate" placeholder="Quotation Date">
+<input id="valid" placeholder="Valid Until">
+</div>
+</div>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Description</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead>
+<tbody>
+<tr><td><input id="d1" value="Birthday Cake Package"></td><td><input id="q1" type="number" value="1" oninput="calc()"></td><td><input id="p1" type="number" value="6500" oninput="calc()"></td><td><input id="t1" readonly></td></tr>
+<tr><td><input id="d2" value="Cupcake Gift Box"></td><td><input id="q2" type="number" value="2" oninput="calc()"></td><td><input id="p2" type="number" value="2000" oninput="calc()"></td><td><input id="t2" readonly></td></tr>
+<tr><td><input id="d3" value="Delivery"></td><td><input id="q3" type="number" value="1" oninput="calc()"></td><td><input id="p3" type="number" value="500" oninput="calc()"></td><td><input id="t3" readonly></td></tr>
+</tbody>
+</table>
+</div>
+<div class="summary"><div class="totalbox"><div class="totalrow"><span>Total Quotation</span><span>LKR</span></div><div class="big" id="grand">0.00</div></div></div>
+<div style="margin-top:26px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;">
+<div style="flex:1;padding:16px;background:#fff;border:1px solid #efd48a;border-radius:14px;">
+<div style="font-size:14px;color:#777;">Prepared for customer approval</div>
+<input id="signatureName" value="D. Anthony" style="margin-top:18px;width:100%;border:none;border-bottom:1px solid #ccc;font-family:cursive;font-size:34px;color:#222;background:transparent;outline:none;" oninput="saveData()">
+<div style="border-top:1px solid #999;margin-top:6px;padding-top:6px;font-size:14px;">D. Anthony<br><span style="color:#777;">Founder / Authorized Signatory</span></div>
+</div>
+<div style="width:130px;height:130px;border:2px solid #d4af37;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.08);">
+<div style="text-align:center;color:#b8860b;font-weight:700;line-height:1.4;">Golden<br>Whisk<br><span style="font-size:12px;">Official Seal</span></div>
+</div>
+</div>
+<div class="note">This quotation is valid for 7 days and may change based on final customization requirements.</div>
+</div>
+</div>
 <script>
-    // Logic to calculate math automatically
-    function updateTotals() {
-        let grandTotal = 0;
-        const rows = document.querySelectorAll('.item-row');
-        
-        rows.forEach(row => {
-            // Clean text input to extract numbers only
-            const qtyText = row.querySelector('.qty').innerText.replace(/[^0-9.]/g, '');
-            const priceText = row.querySelector('.price').innerText.replace(/[^0-9.]/g, '');
-            
-            const qty = parseFloat(qtyText) || 0;
-            const price = parseFloat(priceText) || 0;
-            const total = qty * price;
-            
-            row.querySelector('.col-total').innerText = total.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-            grandTotal += total;
-        });
-        
-        document.getElementById('grandTotal').innerText = grandTotal.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-    }
-
-    // Function to add a blank row
-    function addRow() {
-        const tbody = document.getElementById('tableBody');
-        const newRow = document.createElement('tr');
-        newRow.className = 'item-row';
-        newRow.innerHTML = `
-            <td><div class="editable" contenteditable="true" style="width: 100%; font-weight: bold;">Additional Item</div><div class="editable" contenteditable="true" style="width: 100%; font-size: 0.85em; color: #666;">Description...</div></td>
-            <td><div class="editable qty" contenteditable="true">0</div></td>
-            <td><div class="editable price" contenteditable="true">0.00</div></td>
-            <td class="col-total">0.00</td>
-        `;
-        tbody.appendChild(newRow);
-        // Bind the calculation event to the new row
-        newRow.addEventListener('input', updateTotals);
-    }
-
-    // Initialize calculation listener
-    document.getElementById('quoteTable').addEventListener('input', updateTotals);
+function line(q,p,t){const v=(+document.getElementById(q).value||0)*(+document.getElementById(p).value||0);document.getElementById(t).value=v.toFixed(2);return v}
+function calc(){const g=line('q1','p1','t1')+line('q2','p2','t2')+line('q3','p3','t3');document.getElementById('grand').innerText=g.toFixed(2);saveData()}
+function saveData(){const d={};document.querySelectorAll('input,textarea').forEach(e=>d[e.id]=e.value);localStorage.setItem('gw_quote_alt',JSON.stringify(d))}
+function load(){const d=JSON.parse(localStorage.getItem('gw_quote_alt')||'{}');Object.keys(d).forEach(k=>{const e=document.getElementById(k);if(e)e.value=d[k]});calc()}
+window.onload=load;
 </script>
-
 </body>
 </html>
