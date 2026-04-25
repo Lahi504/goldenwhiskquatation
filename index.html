@@ -1,363 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance Strenght Customer Survey</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #ffe0c2 100%);
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 650px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-            padding: 36px 28px 28px 28px;
-            border: 1px solid #f3a46b;
-        }
-        h1 {
-            text-align: center;
-            color: #FF5F1F;
-            font-size: 2.1em;
-            margin-bottom: 18px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-        .form-section {
-            margin-bottom: 32px;
-        }
-        .form-section h2 {
-            color: #FF5F1F;
-            background: linear-gradient(90deg, #ffe0c2 0%, #fff 100%);
-            border-left: 5px solid #FF5F1F;
-            padding: 8px 0 8px 12px;
-            margin-top: 0;
-            border-radius: 6px;
-            font-size: 1.2em;
-        }
-        .customer-details {
-            background: #f7fafd;
-            padding: 18px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(255,95,31,0.07);
-        }
-        .question {
-            margin-bottom: 18px;
-            padding: 14px 12px;
-            background: #fff7f0;
-            border-radius: 7px;
-            box-shadow: 0 1px 4px rgba(255,95,31,0.04);
-            transition: box-shadow 0.2s;
-        }
-        .question:focus-within {
-            box-shadow: 0 2px 8px rgba(255,95,31,0.12);
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-        .answers label {
-            display: inline-block;
-            margin-right: 24px;
-            font-weight: 500;
-            color: #FF5F1F;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="number"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1.5px solid #ffd1a6;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 1em;
-            background: #fff;
-            transition: border-color 0.2s;
-        }
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        input[type="number"]:focus,
-        textarea:focus {
-            border-color: #FF5F1F;
-            outline: none;
-        }
-        textarea {
-            height: 80px;
-            resize: vertical;
-        }
-        button {
-            background: linear-gradient(90deg, #FF5F1F 0%, #ffb36b 100%);
-            color: #fff;
-            border: none;
-            padding: 14px 32px;
-            border-radius: 7px;
-            font-size: 1.1em;
-            cursor: pointer;
-            margin-top: 10px;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(255,95,31,0.08);
-            transition: background 0.2s, box-shadow 0.2s;
-        }
-        button:hover:not(:disabled) {
-            background: linear-gradient(90deg, #ffb36b 0%, #FF5F1F 100%);
-            box-shadow: 0 4px 16px rgba(255,95,31,0.15);
-        }
-        button:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-        .result {
-            margin: 25px 0 0 0;
-            padding: 18px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            box-shadow: 0 2px 8px rgba(44,62,80,0.08);
-        }
-        .result.good {
-            background: linear-gradient(90deg, #4CAF50 0%, #a8e063 100%);
-            color: #fff;
-        }
-        .result.mid {
-            background: linear-gradient(90deg, #FFC107 0%, #ffe082 100%);
-            color: #222;
-        }
-        .result.bad {
-            background: linear-gradient(90deg, #F44336 0%, #ff7961 100%);
-            color: #fff;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Golden Whisk Quotation - Elegant Card Design</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:14px;font-family:Arial,sans-serif;background:#1a1a1a}
+.toolbar{max-width:210mm;margin:0 auto 12px;display:flex;gap:10px;justify-content:center}
+button{padding:10px 16px;border-radius:12px;border:1px solid #d4af37;background:#111;color:#d4af37}
+.page{width:210mm;min-height:297mm;margin:auto;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 0 24px rgba(0,0,0,.3)}
+.header{padding:28px;background:linear-gradient(135deg,#111,#2b2b2b);color:#d4af37}
+.brand{font-size:46px;font-weight:700}
+.sub{font-size:17px;margin-top:6px}
+.quote{margin-top:18px;font-size:42px;letter-spacing:3px;color:#fff}
+.content{padding:24px;background:linear-gradient(180deg,#fffdf8,#fff7e8)}
+.topcards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:#fff;border:2px solid #efd48a;border-radius:18px;padding:18px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+.label{font-size:13px;color:#b8860b;font-weight:700;margin-top:6px}
+input,textarea{width:100%;padding:11px;border:1px solid #ead8a0;border-radius:10px;margin-top:6px}
+.tablewrap{margin-top:22px;background:#fff;border-radius:18px;overflow:hidden;border:2px solid #efd48a}
+table{width:100%;border-collapse:collapse} th{background:#111;color:#d4af37;padding:12px} td{padding:10px;border-top:1px solid #f0e1b2}
+.summary{margin-top:22px;display:flex;justify-content:flex-end}
+.totalbox{width:320px;background:#111;color:#d4af37;border-radius:18px;padding:18px}
+.totalrow{display:flex;justify-content:space-between;font-size:18px}
+.big{font-size:30px;font-weight:700;margin-top:8px}
+.note{margin-top:28px;padding:16px;border-left:5px solid #d4af37;background:#fff;border-radius:12px}
+@media(max-width:768px){.page{width:100%}.topcards{grid-template-columns:1fr}.brand{font-size:34px}.quote{font-size:30px}}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1><b>ඔබගේ මූල්‍ය තත්වය ඔබගේ අනාගතය සදහා කෙතරම් සූදානම් ද?</b>, යන්න සොයා බලමු.</h1>
-        <form id="survey-form">
-            <div class="form-section">
-                <h2>Add Your Details</h2>
-                <div class="customer-details">
-                    <div class="question">
-                        <label for="customer-name">Full Name:</label>
-                        <input type="text" id="customer-name" name="customer-name" required>
-                    </div>
-                    <div class="question">
-                        <label for="customer-email">Email:</label>
-                        <input type="email" id="customer-email" name="customer-email" required>
-                    </div>
-                    <div class="question">
-                        <label for="customer-phone">Phone Number:</label>
-                        <input type="tel" id="customer-phone" name="customer-phone" required>
-                    </div>
-                    <div class="question">
-                        <label for="customer-age">Age:</label>
-                        <input type="number" id="customer-age" name="customer-age" min="18" max="100" required>
-                    </div>
-                
-                </div>
-            </div>
-
-            <div class="form-section">
-                <h2>සමීක්ෂණ ප්‍රශ්ණ</h2>
-                <div class="question">
-                    <label>1. ඔබගේ වාර්ෂික ආදායම වගේ දහගුණයක ජීවිත රක්ෂණයක් ඔබ සතුව තිබේ ද?</label>
-                    <div class="answers">
-                        <label><input type="radio" name="q1" value="yes" required> Yes</label>
-                        <label><input type="radio" name="q1" value="no"> No</label>
-                    </div>
-                </div>
-                <div class="question">
-                    <label>2. අසාද්‍ය රෝගයකදී වියදම් කිරීමට ඔබගේ වාර්ෂික ආදායම මෙන් දෙගුණයක අරමුදලක් ඔබ සතුව තිබේ ද?</label>
-                    <div class="answers">
-                        <label><input type="radio" name="q2" value="yes" required> Yes</label>
-                        <label><input type="radio" name="q2" value="no"> No</label>
-                    </div>
-                </div>
-                <div class="question">
-                    <label>3. නොසිතූ වෙලාවකදී අසාද්‍ය රෝගී තත්වයකට හෝ සදාකාලික ආබාදයකට මුහුණ දීමට සිදුවුවහොත් අවම වශයෙන් මාස හයක කාලයක් සදහා වියදම් කළමණාකරණය කිරීම සදහා ඔබ සතුව අරමුදලක් තිබේ ද?</label>
-                    <div class="answers">
-                        <label><input type="radio" name="q3" value="yes" required> Yes</label>
-                        <label><input type="radio" name="q3" value="no"> No</label>
-                    </div>
-                </div>
-                <div class="question">
-                    <label>4. ඔබ හෝ ඔබගේ පවුලේ සමාජිකයන්ගේ හදිසි රෝහල් ගත වීමකදී වියදම් කිරීම සදහා ඔබ සතු ඉතිරි කර ඇති මුදල් අවශ්‍ය නොවේ.</label>
-                    <div class="answers">
-                        <label><input type="radio" name="q4" value="yes" required> Yes</label>
-                        <label><input type="radio" name="q4" value="no"> No</label>
-                    </div>
-                </div>
-                <div class="question">
-                    <label>5. ඔබ ඔබගේ දරුවාගේ උසස් අද්‍යාපනය සහ අනාගතය වෙනුවෙන් සැලසුම් දැනටමත් සකස්කර ඇත් ද?</label>
-                    <div class="answers">
-                        <label><input type="radio" name="q5" value="yes" required> Yes</label>
-                        <label><input type="radio" name="q5" value="no"> No</label>
-                    </div>
-                </div>
-                <div class="question">
-                    <label>6. ඔබගේ විශ්‍රාමය වෙනුවෙන් මේ වනවිට ඔබගේ වාර්ෂික ආදායම වගේ 10 ගුණයක අරමුදලක් සැලසුම් කර ඇත් ද?</label>
-                    <div class="answers">
-                        <label><input type="radio" name="q6" value="yes" required> Yes</label>
-                        <label><input type="radio" name="q6" value="no"> No</label>
-                    </div>
-                </div>
-                <div class="question">
-                    <label>7. ඔබ හදිසියේ මියගියහොත් හෝ ඔබට ඇතිවන සදාකාලික ආබාදිත තත්වයකදී නිවාස ණය ඇතුලු සියලුම වගකීම් වලින් සම්පූර්ණයෙන්ම නිදහස් වීමට මට හැකියාව තිබේද?</label>
-                    <div class="answers">
-                        <label><input type="radio" name="q7" value="yes" required> Yes</label>
-                        <label><input type="radio" name="q7" value="no"> No</label>
-                    </div>
-                </div>
-                <div class="question">
-                    <label>8. ඔබගේ රැකියාව අහිමි වුවහොත්, ඔබගේ මාසික වියදම් අවම වශයෙන් මාස 6ක් සදහා සැපයීමට ප්‍රමාණවත් ඉතුරුමක් ඔබ සතුව ඇත් ද?</label>
-                    <div class="answers">
-                        <label><input type="radio" name="q8" value="yes" required> Yes</label>
-                        <label><input type="radio" name="q8" value="no"> No</label>
-                    </div>
-                </div>
-                <div class="question">
-                    <label>9. ඔබගේ නිවස විකිණීමට සිදුවුවහොත් එහි උකස ගෙවීමට තරම් ප්‍රමාණවත් මුදලක් ඔබ සතුව තිබේ ද?</label>
-                    <div class="answers">
-                        <label><input type="radio" name="q9" value="yes" required> Yes</label>
-                        <label><input type="radio" name="q9" value="no"> No</label>
-                    </div>
-                </div>
-                <div class="question">
-                    <label>10. ඔබගේ මූල්‍ය කලමණාකරණය කිරීම සදහා විශ්වාස වන්ත මූල්‍ය උපදේශකවරයකු ඔබ හට සිටීද?</label>
-                    <div class="answers">
-                        <label><input type="radio" name="q10" value="yes" required> Yes</label>
-                        <label><input type="radio" name="q10" value="no"> No</label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hidden advisor information for backend/email only -->
-            <input type="hidden" id="advisor-name" name="advisor-name" value="Lahiru Sahan">
-            <input type="hidden" id="advisor-email" name="advisor-email" value="lahirusahanofficial@gmail.com">
-            <input type="hidden" id="advisor-phone" name="advisor-phone" value="0725121120">
-            <div class="question">
-                <label for="comments">Comments:</label>
-                <textarea id="comments" name="comments" readonly>සමීක්ෂණය සම්පූර්ණ කිරීම ගැන ඔබට ස්තූතියි. ඔබගේ අදහස් ඉතා වටිනා අතර අපගේ සේවාවන් වැඩිදියුණු කිරීමට උපකාරී වනු ඇත. මූල්‍ය හා රක්ෂණ පිළිබඳ වැඩිදුර තොරතුරු ලබා ගැනීමට ඔබට අවශ්‍ය නම් කරුණාකර මාව සම්බන්ධ කරගන්න. මගේ සම්බන්ධතා තොරතුරු ඉහත දක්වා ඇති ඔබගේ විද්‍යුත් තැපැල් ලිපිනයට මාරු කරනු ලැබෙනු ඇත.</textarea>
-            </div>
-
-            <button type="submit" id="submit-btn">Submit Survey</button>
-        </form>
-        <div id="result-message" class="result" style="display:none;"></div>
-    </div>
-    <script>
-        // Initialize EmailJS (replace with your public key)
-        emailjs.init('CakL-A4OcK1-RGboq');
-
-        document.getElementById('survey-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const form = e.target;
-            let yesCount = 0;
-            const questions = [
-                'මාගේ වාර්ෂික ආදායම වගේ දහගුණයක ජීවිත රක්ෂණයක් මා සතුව ඇත.',
-                'අසාද්‍ය රෝගයකදී වියදම් කිරීමට මාගේ වාර්ෂික ආදායම මෙන් දෙගුණයක අරමුදලක් මා සතුව ඇත.',
-                'නොසිතූ වෙලාවකදී අසාද්‍ය රෝගී තත්වයකට හෝ සදාකාලික ආබාදයකට මුහුණ දීමට සිදුවුවහොත් අවම වශයෙන් මාස හයක කාලයක් සදහා වියදම් කළමණාකරණය කිරීම සදහා මා සතුව අරමුදලක් ඇත.',
-                'මම හෝ මගේ පවුලේ සමාජිකයන්ගේ හදිසි රෝහල් ගත වීමකදී වියදම් කිරීම සදහා මා සතු ඉතිරි කර ඇති මුදල් අවශ්‍ය නොවේ.',
-                'මම මගේ දරුවාගේ උසස් අද්‍යාපනය සහ අනාගතය වෙනුවෙන් සැලසුම් කර ඇත.',
-                'මගේ විශ්‍රාමය වෙනුවෙන් මේ වනවිට මගේ වාර්ෂික ආදායම වගේ 10 ගුණයක අරමුදලක් සැලසුම් කර ඇත.',
-                'මාගේ හදිසි මරණයකදී හෝ සදාකාලික ආබාදිත තත්වයකදී නිවාස ණය ඇතුලු සියලුම වගකීම් වලින් සම්පූර්ණයෙන්ම නිදහස් වීමට මට හැකියාව ඇත.',
-                'මගේ රැකියාව අහිමි වුවහොත්, මගේ මාසික වියදම් අවම වශයෙන් මාස 6ක් සදහා සැපයීමට ප්‍රමාණවත් ඉතුරුමක් මා සතුව ඇත.',
-                'මගේ නිවස විකිණීමට සිදුවුවහොත් එහි උකස ගෙවීමට තරම් ප්‍රමාණවත් මුදලක් මා සතුව ඇත.',
-                'මගේ මූල්‍ය කලමණාකරණය කිරීම සදහා විශ්වාස වන්ත මූල්‍ය උපදේශකවරයකු මා හට සිටී.'
-            ];
-            let answers = {};
-            let questionAnswerList = '';
-            for (let i = 1; i <= 10; i++) {
-                const val = form[`q${i}`].value;
-                answers[`q${i}`] = val;
-                questionAnswerList += `${i}. ${questions[i-1]}: ${val}\n`;
-                if (val === 'yes') yesCount++;
-            }
-            
-            // Collect customer details
-            const customerName = form['customer-name'].value;
-            const customerEmail = form['customer-email'].value;
-            const customerPhone = form['customer-phone'].value;
-            const customerAge = form['customer-age'].value;
-            
-            
-            // Collect advisor details
-            const advisorName = form['advisor-name'].value;
-            const advisorEmail = form['advisor-email'].value;
-            const advisorPhone = form['advisor-phone'].value;
-            const comments = form['comments'].value;
-            
-            // Color code logic
-            let resultClass = 'good';
-            let resultText = 'Excellent! Most answers are positive.';
-            if (yesCount <= 4) {
-                resultClass = 'bad';
-                resultText = 'We are sorry! Most answers are negative.';
-            } else if (yesCount <= 7) {
-                resultClass = 'mid';
-                resultText = 'Thank you! Your feedback is mixed.';
-            }
-            const resultDiv = document.getElementById('result-message');
-            resultDiv.className = 'result ' + resultClass;
-            resultDiv.textContent = `Yes: ${yesCount} / 10. ${resultText}`;
-            resultDiv.style.display = 'block';
-            
-            // Send survey info to email
-            try {
-                await emailjs.send(
-                    'service_7z111vz',
-                    'template_vji63cd',
-                    {
-                        customer_name: customerName,
-                        customer_email: customerEmail,
-                        advisor_name: advisorName,
-                        advisor_email: advisorEmail,
-                        advisor_phone: advisorPhone,
-                        comments: comments,
-                        yes_count: yesCount,
-                        answers: JSON.stringify(answers, null, 2),
-                        submission_date: new Date().toLocaleString(),
-                        question_answer_list: questionAnswerList
-                    }
-                );
-                resultDiv.textContent += '\nSurvey sent to advisor!';
-
-                await emailjs.send(
-                    'service_7z111vz',
-                    'template_7o5dvq8',
-                    {
-                        advisor_email: advisorEmail,
-                        customer_name: customerName,
-                        customer_email: customerEmail,
-                        customer_phone: customerPhone,
-                        customer_age: customerAge,
-                        
-                        
-                        comments: comments,
-                        yes_count: yesCount,
-                        answers: JSON.stringify(answers, null, 2),
-                        submission_date: new Date().toLocaleString(),
-                        question_answer_list: questionAnswerList
-                    }
-                );
-                resultDiv.textContent += '\nSurvey sent to advisor!';
-            } catch (err) {
-                resultDiv.textContent += `\nFailed to send survey. Error: ${err?.text || err?.message || err}`;
-                alert('EmailJS error: ' + (err?.text || err?.message || err));
-                console.error('EmailJS error details:', err);
-            }
-            document.getElementById('submit-btn').disabled = true;
-        });
-    </script>
+<div class="toolbar"><button onclick="saveData()">Save</button><button onclick="window.print()">Print / PDF</button></div>
+<div class="page">
+<div class="header">
+<div class="brand">Golden Whisk</div>
+<div class="sub">Luxury Cakes & Custom Orders • D. Anthony</div>
+<div class="quote">QUOTATION</div>
+</div>
+<div class="content">
+<div class="topcards">
+<div class="card">
+<div class="label">CLIENT DETAILS</div>
+<input id="client" placeholder="Client Name">
+<textarea id="address" rows="3" placeholder="Address"></textarea>
+<input id="phone" placeholder="Phone Number">
+</div>
+<div class="card">
+<div class="label">QUOTE INFO</div>
+<input id="qno" placeholder="Quotation No">
+<input id="qdate" placeholder="Quotation Date">
+<input id="valid" placeholder="Valid Until">
+</div>
+</div>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Description</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead>
+<tbody>
+<tr><td><input id="d1" value="Birthday Cake Package"></td><td><input id="q1" type="number" value="1" oninput="calc()"></td><td><input id="p1" type="number" value="6500" oninput="calc()"></td><td><input id="t1" readonly></td></tr>
+<tr><td><input id="d2" value="Cupcake Gift Box"></td><td><input id="q2" type="number" value="2" oninput="calc()"></td><td><input id="p2" type="number" value="2000" oninput="calc()"></td><td><input id="t2" readonly></td></tr>
+<tr><td><input id="d3" value="Delivery"></td><td><input id="q3" type="number" value="1" oninput="calc()"></td><td><input id="p3" type="number" value="500" oninput="calc()"></td><td><input id="t3" readonly></td></tr>
+</tbody>
+</table>
+</div>
+<div class="summary"><div class="totalbox"><div class="totalrow"><span>Total Quotation</span><span>LKR</span></div><div class="big" id="grand">0.00</div></div></div>
+<div style="margin-top:26px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;">
+<div style="flex:1;padding:16px;background:#fff;border:1px solid #efd48a;border-radius:14px;">
+<div style="font-size:14px;color:#777;">Prepared for customer approval</div>
+<input id="signatureName" value="D. Anthony" style="margin-top:18px;width:100%;border:none;border-bottom:1px solid #ccc;font-family:cursive;font-size:34px;color:#222;background:transparent;outline:none;" oninput="saveData()">
+<div style="border-top:1px solid #999;margin-top:6px;padding-top:6px;font-size:14px;">D. Anthony<br><span style="color:#777;">Founder / Authorized Signatory</span></div>
+</div>
+<div style="width:130px;height:130px;border:2px solid #d4af37;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.08);">
+<div style="text-align:center;color:#b8860b;font-weight:700;line-height:1.4;">Golden<br>Whisk<br><span style="font-size:12px;">Official Seal</span></div>
+</div>
+</div>
+<div class="note">This quotation is valid for 7 days and may change based on final customization requirements.</div>
+</div>
+</div>
+<script>
+function line(q,p,t){const v=(+document.getElementById(q).value||0)*(+document.getElementById(p).value||0);document.getElementById(t).value=v.toFixed(2);return v}
+function calc(){const g=line('q1','p1','t1')+line('q2','p2','t2')+line('q3','p3','t3');document.getElementById('grand').innerText=g.toFixed(2);saveData()}
+function saveData(){const d={};document.querySelectorAll('input,textarea').forEach(e=>d[e.id]=e.value);localStorage.setItem('gw_quote_alt',JSON.stringify(d))}
+function load(){const d=JSON.parse(localStorage.getItem('gw_quote_alt')||'{}');Object.keys(d).forEach(k=>{const e=document.getElementById(k);if(e)e.value=d[k]});calc()}
+window.onload=load;
+</script>
 </body>
 </html>
